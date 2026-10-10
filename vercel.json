@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "services": {
+    "chatrealtime": {
+      "root": "./",
+      "entrypoint": "Dockerfile.vercel"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": {
+        "service": "chatrealtime"
+      }
+    }
+  ]
+}
